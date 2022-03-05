@@ -100,3 +100,4 @@ apps/mobile-e2e/artifacts
 ## other
 
 .idea
+.env

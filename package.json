@@ -6,7 +6,8 @@
     "prepare": "husky install",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "commit": "cz"
   },
   "private": true,
   "devDependencies": {

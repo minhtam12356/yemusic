@@ -1,5 +1,6 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import React from 'react';
+
+import { Text, View } from 'react-native';
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
         fontSize: 48
       }}>Hello World</Text>
     </View>
-  )
-}
+  );
+};
 
-export default App
+export default App;

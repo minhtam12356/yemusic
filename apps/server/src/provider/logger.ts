@@ -1,5 +1,7 @@
 import { createLogger, format, transports } from 'winston';
 
+import config  from '../config';
+
 const { combine, printf, errors } = format;
 
 const myFormat = printf(info => {
@@ -28,7 +30,7 @@ export const logger = createLogger({
     ),
     transports: [
       new transports.Console({
-        level: process.env.LOGGING_LEVEL || 'debug',
+        level: config.logger.level,
         handleExceptions: true,
         stderrLevels: ['error', 'warning'],
       }),

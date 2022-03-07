@@ -1,6 +1,7 @@
 import * as express from 'express';
+
+import config from '../config';
 import routers from '../routers';
-import config  from '../config';
 
 export const loadServer = async () => {
     const server = express();
@@ -8,5 +9,5 @@ export const loadServer = async () => {
     const API_PORT = config.port;
     server.listen(API_PORT, () => {
         logger.info(`🔥 ${config.hostName}:${config.port}/api`);
-    })
-}
+    });
+};

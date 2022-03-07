@@ -1,5 +1,6 @@
-import  container from './root.config';
+import  config from './root.config';
+export { logger } from "./logger";
 
 export default  {
-    ...container
+    ...config
 };

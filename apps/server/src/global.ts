@@ -1,2 +1,2 @@
-import { logger } from "./provider";
+import { logger } from "./config";
 global.logger = logger;

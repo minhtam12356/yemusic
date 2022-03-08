@@ -1,9 +1,9 @@
 type Logger = {
-    level: string
-}
+  level: string;
+};
 
 export type HttpServerConfig = {
-    hostName: string;
-    port: number;
-    logger: Logger;
+  hostName: string;
+  port: number;
+  logger: Logger;
 };

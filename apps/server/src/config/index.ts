@@ -1,5 +1,5 @@
-import  config from './root.config';
+import config from './root.config';
 
-export default  {
-    ...config
+export default {
+  ...config,
 };

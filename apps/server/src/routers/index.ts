@@ -1,6 +1,5 @@
-import healthCheckRouter from "./healthcheck";
+import healthCheckRouter from './healthcheck';
 
-export default (server) => {
-    server.use('/api',healthCheckRouter);
-  };
-  
+export default server => {
+  server.use('/api', healthCheckRouter);
+};

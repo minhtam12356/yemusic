@@ -1,6 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/scss/variables';
+@import './assets/scss/functions';
+@import './assets/scss/mixins';
+@import './assets/scss/fonts';
+@import './assets/scss/global';
 
-.a {
-  position: absolute;
-  font-size: 12px;
-}
+@import './components/atoms/Icon/style.scss';

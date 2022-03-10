@@ -1,0 +1,17 @@
+@mixin reponsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $WIDTH-MOBILE) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media (min-width: $WIDTH-TABLET) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: $WIDTH-DESKTOP) {
+      @content;
+    }
+  }
+}

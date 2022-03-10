@@ -1,0 +1,53 @@
+html {
+  font-size: $FONT-SIZE-HTML;
+  word-break: break-word;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: $FONTFAMILY-BASIC;
+  color: $COLOR-NEUTRAL-8;
+}
+
+p {
+  font-size: pxToRem($FONT-SIZE-HTML-VALUE);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+select {
+  font-family: inherit;
+
+  &:focus {
+    border: none;
+    outline: none;
+    appearance: none;
+  }
+}
+
+[role='button'],
+button {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}

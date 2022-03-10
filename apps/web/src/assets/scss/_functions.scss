@@ -1,0 +1,7 @@
+@function pxToRem($pixel) {
+  @if not $pixel {
+    @error "Missing argument $pixel";
+  }
+
+  @return calc($pixel/$FONT-SIZE-HTML-VALUE) + rem;
+}

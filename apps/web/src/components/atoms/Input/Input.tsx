@@ -5,15 +5,15 @@ import './styles.scss';
 
 export interface InputProps
   extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
-  suffix: React.ReactNode;
-  fullWidth: boolean;
+  suffix?: React.ReactNode;
+  fullWidth?: boolean;
 }
 
-export const Input: FC<InputProps> = ({ suffix, fullWidth = false, ...otherProps }) => {
+export const Input: FC<InputProps> = ({ suffix, fullWidth, ...otherProps }) => {
   return (
-    <div className={classNames('cpn-input', fullWidth && 'cpn-input--full-width')}>
-      <input className="cpn-input__input" type="text" {...otherProps} />
-      {suffix && <div className="cpn-input__icon">{suffix}</div>}
+    <div className={classNames('a-input', fullWidth && 'a-input--full-width')}>
+      <input className="a-input__input" {...otherProps} />
+      {suffix && <div className="a-input__icon">{suffix}</div>}
     </div>
   );
 };

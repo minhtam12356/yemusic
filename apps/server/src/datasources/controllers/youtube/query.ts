@@ -14,3 +14,15 @@ export const listSong = async (req, res, next) => {
     next(error);
   }
 };
+
+export const song = async (req, res, next) => {
+  try {
+    const { youtubeId } = req.params;
+
+    const result = await ytb.getAudio(youtubeId);
+
+    return res.status(200).json(result);
+  } catch (error) {
+    next(error);
+  }
+};

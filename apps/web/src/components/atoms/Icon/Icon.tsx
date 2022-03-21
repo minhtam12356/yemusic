@@ -2,6 +2,8 @@ import React, { FC } from 'react';
 
 import classNames from 'classnames';
 
+import './style.scss';
+
 export interface IconProps {
   color?: 'initial' | 'primary';
 }

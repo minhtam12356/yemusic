@@ -8,16 +8,17 @@ $FONT-SIZE-HTML-VALUE: 16;
 $FONT-SIZE-HTML: 16px;
 
 $COLOR-TRANSPARENT: transparent;
-$COLOR-WHITE: rgb(255, 255, 255);
-$COLOR-BLACK: rgb(0, 0, 0);
 
-$COLOR-PRIMARY: rgb(73, 101, 176);
+$PRIMARY-TEXT: rgba(var(--primary-text, 219, 219, 219), 1);
+$SECONDARY-TEXT: rgba(var(--secondary-text, 176, 176, 176), 1);
+$ACCENT-TEXT: rgba(var(--accent-text, 37, 192, 174), 1);
+$CONTRACT-TEXT: rgba(var(--contract-text, 32, 32, 32), 1);
 
-$COLOR-NEUTRAL-1: rgb(243, 244, 246);
-$COLOR-NEUTRAL-2: rgb(229, 231, 235);
-$COLOR-NEUTRAL-3: rgb(209, 213, 219);
-$COLOR-NEUTRAL-4: rgb(156, 163, 175);
-$COLOR-NEUTRAL-5: rgb(75, 85, 99);
-$COLOR-NEUTRAL-6: rgb(55, 65, 81);
-$COLOR-NEUTRAL-7: rgb(31, 41, 55);
-$COLOR-NEUTRAL-8: rgb(17, 24, 39);
+$BODY-BACKGROUND: rgba(var(--body-text, 18, 18, 18), 1);
+$SIDEBAR-BACKGROUND: rgba(var(--sidebar-text, 16, 16, 16), 1);
+$INTERACTIVE-BACKGROUND: rgba(var(--interactive-background, 24, 24, 24), 1);
+$ACCENT-BACKGROUND: rgba(var(--accent-text, 37, 192, 174), 1);
+$LOADING-BACKGROUND: rgba(var(--loading-text, 34, 34, 34), 1);
+
+$HOVER-OVERLAY: rgba(var(--hover-overlay, 255, 255, 255), 0.04);
+$MODAL-OVERLAY: rgba(var(--modal-overlay, 255, 255, 255), 0.06);

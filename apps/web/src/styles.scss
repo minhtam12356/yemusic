@@ -1,7 +1,59 @@
-@import './assets/scss/variables';
-@import './assets/scss/functions';
-@import './assets/scss/mixins';
-@import './assets/scss/fonts';
-@import './assets/scss/global';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-@import './components/atoms/Icon/style.scss';
+html {
+  font-size: $FONT-SIZE-HTML;
+  word-break: break-word;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: $FONTFAMILY-BASIC;
+  color: $SECONDARY-TEXT;
+}
+
+p {
+  font-size: pxToRem($FONT-SIZE-HTML-VALUE);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+select {
+  font-family: inherit;
+
+  &:focus {
+    border: none;
+    outline: none;
+    appearance: none;
+  }
+}
+
+[role='button'],
+button {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}

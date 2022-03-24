@@ -1,8 +1,9 @@
 import * as ytdl from 'ytdl-core';
-const mimeType = /audio\/mp4;/;
 
-export default async function getVideoDate(youtubeId: string) {
-  console.log('aaa');
+const mimeType = /audio\/mp4;/;
+import { getAudioResponse } from '../../../interface';
+
+export default async function getAudio(youtubeId: string): Promise<getAudioResponse> {
   try {
     const info = await ytdl.getInfo(youtubeId);
     const audioFormats = await ytdl.filterFormats(info.formats, 'audioonly');

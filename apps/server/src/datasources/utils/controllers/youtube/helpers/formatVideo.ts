@@ -1,8 +1,9 @@
 /* eslint-disable no-prototype-builtins */
+import { Video } from '../../../../interface';
 import getVideoDate from '../getVideoDate';
 import getDateFromText from './getDateFromText';
 
-export default async function formatVideo(video, speedDate = false) {
+export default async function formatVideo(video, speedDate = false): Promise<Video> {
   try {
     video = video.compactVideoRenderer || video.gridVideoRenderer || video.videoRenderer || video.playlistVideoRenderer;
 
@@ -53,10 +54,8 @@ export default async function formatVideo(video, speedDate = false) {
     return {
       youtubeId: 'didyoumean',
       title: '',
-      artist: '',
       duration: '',
       publishedAt: new Date(Date.now()),
-      views: 0,
       thumbnail: {},
       channel: '',
       view: '',

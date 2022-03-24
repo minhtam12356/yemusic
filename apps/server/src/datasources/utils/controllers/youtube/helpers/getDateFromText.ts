@@ -1,4 +1,4 @@
-export default function getDateFromText(dateTxt: string) {
+export default function getDateFromText(dateTxt: string): Date {
   const unit = {
     second: {
       terms: ['sec', 'Sekun', 'segun'],

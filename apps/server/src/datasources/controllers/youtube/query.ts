@@ -1,6 +1,8 @@
+import { Request, Response, NextFunction } from 'express';
+
 import { ytb } from '../../utils/controllers';
 
-export const listSong = async (req, res, next) => {
+export const listSong = async (req: Request, res: Response, next: NextFunction): Promise<Response> => {
   try {
     const { search, token, apikey } = req.body;
 
@@ -15,7 +17,7 @@ export const listSong = async (req, res, next) => {
   }
 };
 
-export const song = async (req, res, next) => {
+export const song = async (req: Request, res: Response, next: NextFunction): Promise<Response> => {
   try {
     const { youtubeId } = req.params;
 

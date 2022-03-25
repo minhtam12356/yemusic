@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 
 import classNames from 'classnames';
-
 import './styles.scss';
 
 export interface InputProps
@@ -13,20 +12,11 @@ export interface InputProps
 
 export const Input: FC<InputProps> = ({ className, disabled, fullWidth, prefix, suffix, ...otherProps }) => {
   return (
-    <div
-      className={classNames(
-        'a-input-group-wrapper',
-        disabled && 'a-input-group-wrapper--disabled',
-        fullWidth && 'a-input-group-wrapper--full-width',
-        className
-      )}
-    >
-      <div className="a-input-group">
-        {prefix && <div className="a-input-group__addon">{prefix}</div>}
-        <input className="a-input-group__input" disabled={disabled} {...otherProps} />
-        {suffix && <div className="a-input-group__addon">{suffix}</div>}
-      </div>
-    </div>
+    <label className={classNames('a-input-group', disabled && '-disabled', fullWidth && '-full-width')}>
+      {prefix && <span className="a-input-group__addon">{prefix}</span>}
+      <input className="a-input-group__input" disabled={disabled} {...otherProps} />
+      {suffix && <span className="a-input-group__addon">{suffix}</span>}
+    </label>
   );
 };
 

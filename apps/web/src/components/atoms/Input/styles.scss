@@ -1,47 +1,50 @@
-.a-input-group-wrapper {
-  display: inline-block;
+.a-input-group {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 pxToRem(8);
   background-color: $INTERACTIVE-BACKGROUND;
   border-radius: pxToRem(8);
 
-  &--disabled {
+  &:hover {
+    &::before {
+      position: absolute;
+      inset: 0;
+      content: '';
+      background-color: $HOVER-OVERLAY;
+      border-radius: inherit;
+    }
+
+    .a-input-group__addon,
+    .a-input-group__input {
+      color: $PRIMARY-TEXT;
+    }
+  }
+
+  &.-disabled {
     pointer-events: none;
     opacity: 0.32;
   }
 
-  &--full-width {
+  &.-full-width {
     width: 100%;
   }
 
-  .a-input-group {
-    display: flex;
-    align-items: center;
-    height: 40px;
+  &__addon {
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+
+  &__input {
+    flex-grow: 1;
     padding: 0 pxToRem(8);
-    border-radius: inherit;
-
-    &:hover {
-      background-color: $HOVER-OVERLAY;
-
-      .a-input-group__input {
-        color: $PRIMARY-TEXT;
-      }
-    }
-
-    &__addon {
-      width: 24px;
-      height: 24px;
-      overflow: hidden;
-    }
-
-    &__input {
-      flex-grow: 1;
-      padding: 0 pxToRem(8);
-      font-family: inherit;
-      font-size: pxToRem(14);
-      color: $SECONDARY-TEXT;
-      background-color: $COLOR-TRANSPARENT;
-      border: 0;
-      outline: 0;
-    }
+    font-family: inherit;
+    font-size: pxToRem(14);
+    color: $SECONDARY-TEXT;
+    background-color: $COLOR-TRANSPARENT;
+    border: 0;
+    outline: 0;
   }
 }

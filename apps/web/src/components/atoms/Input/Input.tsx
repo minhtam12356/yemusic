@@ -1,19 +1,31 @@
 import React, { FC } from 'react';
 
 import classNames from 'classnames';
+
 import './styles.scss';
 
 export interface InputProps
-  extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+  extends Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, 'prefix'> {
+  prefix?: React.ReactNode;
   suffix?: React.ReactNode;
   fullWidth?: boolean;
 }
 
-export const Input: FC<InputProps> = ({ suffix, fullWidth, ...otherProps }) => {
+export const Input: FC<InputProps> = ({ className, disabled, fullWidth, prefix, suffix, ...otherProps }) => {
   return (
-    <div className={classNames('a-input', fullWidth && 'a-input--full-width')}>
-      <input className="a-input__input" {...otherProps} />
-      {suffix && <div className="a-input__icon">{suffix}</div>}
+    <div
+      className={classNames(
+        'a-input-group-wrapper',
+        disabled && 'a-input-group-wrapper--disabled',
+        fullWidth && 'a-input-group-wrapper--full-width',
+        className
+      )}
+    >
+      <div className="a-input-group">
+        {prefix && <div className="a-input-group__addon">{prefix}</div>}
+        <input className="a-input-group__input" disabled={disabled} {...otherProps} />
+        {suffix && <div className="a-input-group__addon">{suffix}</div>}
+      </div>
     </div>
   );
 };

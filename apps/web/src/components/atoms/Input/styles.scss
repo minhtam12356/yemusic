@@ -1,22 +1,47 @@
-.a-input {
-  display: flex;
-  border: 1px solid #E5E7EB;
-  border-radius: 8px;
-  padding: 10px 16px;
-  width: 240px;
+.a-input-group-wrapper {
+  display: inline-block;
+  background-color: $INTERACTIVE-BACKGROUND;
+  border-radius: pxToRem(8);
+
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.32;
+  }
 
   &--full-width {
     width: 100%;
   }
 
-  &__input {
-    flex-grow: 1;
-    border: none;
-    outline: unset;
-  }
+  .a-input-group {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 pxToRem(8);
+    border-radius: inherit;
 
-  &__icon {
-    margin-left: 16px;
-    cursor: pointer;
+    &:hover {
+      background-color: $HOVER-OVERLAY;
+
+      .a-input-group__input {
+        color: $PRIMARY-TEXT;
+      }
+    }
+
+    &__addon {
+      width: 24px;
+      height: 24px;
+      overflow: hidden;
+    }
+
+    &__input {
+      flex-grow: 1;
+      padding: 0 pxToRem(8);
+      font-family: inherit;
+      font-size: pxToRem(14);
+      color: $SECONDARY-TEXT;
+      background-color: $COLOR-TRANSPARENT;
+      border: 0;
+      outline: 0;
+    }
   }
 }

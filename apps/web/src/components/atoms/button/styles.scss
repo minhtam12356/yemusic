@@ -1,0 +1,51 @@
+// Mixins 
+
+@mixin button-size($font-size, $padding) {
+  padding: $padding;
+  padding-left: 0;
+  padding-right: 0;
+
+  font-size: $font-size;
+}
+
+.a-button-group {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  text-align: center;
+  
+  cursor: pointer;
+  user-select: none;
+  text-transform: uppercase;
+
+  font-family: inherit;
+  background-color: $COLOR-TRANSPARENT;
+  border: 0;
+  outline: 0;
+
+  &.-size-sm {
+    @include button-size(0.8rem, 1rem );
+  }
+
+  &.-size-lg {
+    @include button-size(1rem, 1.2rem )
+  }
+
+
+  &.is-fluid{
+    display: block;
+    width: 100%;
+  }
+
+  &.-disabled {
+    pointer-events: none;
+    opacity: 0.32;
+  }
+
+  &__addon {
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+}
